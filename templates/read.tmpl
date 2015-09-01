@@ -1,0 +1,20 @@
+{{define "read"}}
+
+{{template "form" .}}
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2 col-md-7 col-md-offset-3 col-lg-6 col-lg-offset-3">
+			<h1>{{.Title}}</h1>
+			<div class="content">
+				{{.Content}}
+				<hr>
+				<p>
+					<a href="{{.Url}}" alt="{{.Title}}" target="_blank">View original</a>
+				</p>
+			</div>
+			<hr>
+		</div>
+	</div>
+</div>
+{{template "footer"}}
+{{end}}

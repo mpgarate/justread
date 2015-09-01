@@ -1,0 +1,15 @@
+{{define "form"}}
+<div class="container">
+	<div class="row">
+		<form name="input" class="form-inline" action="/read" method="get">
+			<div class="home-link pull-left">
+				<h1>
+					<a href="/">#</a>
+				</h1>
+			</div>
+			<input type="text" class="url-input" placeholder="http://" name="url" autocomplete="off">
+			<input type="submit" class="hidden-button" value="Read">
+		</form>
+	</div>
+</div>
+{{end}}
