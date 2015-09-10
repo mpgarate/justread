@@ -3,6 +3,8 @@ JustRead
 
 Minimal web content beautification with Readability, written in Go.
 
+Demo: [justread.mpgarate.com](http://justread.mpgarate.com/)
+
 ### Install
 
 ```sh
