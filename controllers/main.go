@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/martini-contrib/render"
 	"github.com/martini-contrib/sessions"
-	"github.com/mpgarate/JustRead/models"
+	"github.com/mpgarate/justread/models"
 	"net/http"
 	"strings"
 )

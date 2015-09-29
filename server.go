@@ -5,7 +5,7 @@ import (
 	"github.com/go-martini/martini"
 	"github.com/martini-contrib/render"
 	"github.com/martini-contrib/sessions"
-	"github.com/mpgarate/JustRead/controllers"
+	"github.com/mpgarate/justread/controllers"
 	"html/template"
 	"net/http"
 )
