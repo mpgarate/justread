@@ -23,13 +23,18 @@ type Article struct {
 // prepare, call, and read Readability API
 func SetReadableContent(article *Article) error {
 	urlString := article.Url
-	// construct the Readability request url
-	queryString := "https://readability.com/api/content/v1/parser?url=" +
-		url.QueryEscape(urlString) +
-		"&token=" + os.Getenv("JUST_READ_READABILITY_TOKEN")
+
+	// construct the request url
+	queryString := "https://mercury.postlight.com/parser?url=" + url.QueryEscape(urlString)
+
+	req, err := http.NewRequest("GET", queryString, nil)
+
+	client := &http.Client{}
+
+	req.Header.Set("x-api-key", os.Getenv("JUST_READ_MERCURY_TOKEN"))
 
 	// send the request
-	res, err := http.Get(queryString)
+	res, err := client.Do(req)
 	if err != nil {
 		return err
 	}
